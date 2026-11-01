@@ -107,3 +107,57 @@ writes the line without it.
 ## Licence
 
 MIT. Use it, change it, ship it.
+
+
+---
+
+# Bobo AI Studio (custom Claude Code skills)
+
+This fork adds a project-local production workflow for **Bobo & Friends**, while preserving the original YouTube skills and Python utilities.
+
+## What's added
+
+The custom skills live in `.claude/skills/` and are available when Claude Code is opened in this repository:
+
+| Skill | Purpose |
+| --- | --- |
+| `/bobo-story` | Develop gentle, child-friendly episode stories |
+| `/bobo-script` | Create timed 30–40 second scripts |
+| `/bobo-characters` | Maintain character canon and visual consistency |
+| `/bobo-storyboard` | Plan 8–10 scenes with timing and continuity |
+| `/bobo-visuals` | Write scene-by-scene image prompts |
+| `/bobo-animation` | Write shot-level animation directions |
+| `/bobo-voice` | Prepare narration, dialogue, and audio notes |
+| `/bobo-produce` | Coordinate the end-to-end episode workflow |
+| `/bobo-publish` | Prepare YouTube metadata and upload checklist |
+| `/bobo-review` | Review story and production readiness |
+
+Supporting documents:
+- `character-bible/CHARACTERS.md` — canonical character roster and profiles.
+- `character-bible/VISUAL-STYLE.md` — shared visual direction.
+- `templates/` — episode brief, storyboard, and production checklist.
+
+## Run with Claude Code
+
+1. Clone this fork and open the repository folder in Claude Code.
+2. Start with `/bobo-produce` and provide an episode idea.
+3. Approve the story before moving to script and storyboard.
+4. Use the specialist skills individually whenever you want to refine one production stage.
+
+Example:
+
+```text
+/bobo-produce
+Create a 35-second episode where Bobo helps a little bird caught in the rain.
+Use the approved Bobo & Friends character bible and plan 8–10 scenes.
+```
+
+The skills create plans, scripts, and prompts. They do **not** generate images, animate video, render media, or upload/publish to YouTube by themselves. Those integrations are future work and will require explicit provider setup and owner approval.
+
+## Character canon
+
+The initial character bible records only details already established by the channel owner. Some character designs and species remain intentionally unspecified. Proposed details must be approved before becoming canon.
+
+## Phase 1 scope
+
+Phase 1 is a Claude Code skill and documentation layer. It does not add a backend, paid AI provider dependencies, automatic rendering, or unattended publishing. The original repository's skills and Python utilities remain in place.
